@@ -1,4 +1,4 @@
-mport sys
+import sys
 import time
 
 from PyQt4 import QtCore, QtGui #PyQt4 is used for designing the GUI
