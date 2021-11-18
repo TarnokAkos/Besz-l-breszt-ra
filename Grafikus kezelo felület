@@ -1,10 +1,9 @@
 import sys
 import time
 
-from PyQt4 import QtCore, QtGui #PyQt4 is used for designing the GUI
-from espeak import espeak #text to speech sonversion
-from time import strftime # To get time from Raspberry pi
-
+from PyQt4 import QtCore, QtGui 
+from espeak import espeak 
+from time import strftime 
 #Code from Qt Designer
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
