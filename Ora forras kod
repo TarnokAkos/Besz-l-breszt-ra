@@ -98,3 +98,10 @@ class Ui_MainWindow(object):
             self.label.setText(_translate("MainWindow",message1, None)) #display the message on GUI screen  
             espeak.synth (message) #speak the message through audio jack 
             time.sleep(1)
+
+    def button_pressed(self): #Amikor megvan nyomva a beallitas gomb 
+        print("Gomb megnyomva")
+        alarm_time = str(self.Set_Time.time())
+        
+        self.alarm_h = int(alarm_time[19:21]) #value of hour is sotred in index value 18 and 20
+        self.alarm_m = int (alarm_time[23:25]) #value of minute is sotred in index value 23 and 24
