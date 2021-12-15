@@ -105,3 +105,15 @@ class Ui_MainWindow(object):
         
         self.alarm_h = int(alarm_time[19:21]) #value of hour is sotred in index value 18 and 20
         self.alarm_m = int (alarm_time[23:25]) #value of minute is sotred in index value 23 and 24
+        message = "Alarm is set at " + str(self.alarm_h) + " hours " + str(self.alarm_m) + " minutes"
+        self.label.setText(_translate("MainWindow", message, None)) #Uzenet kiirasa a GUI-ra  
+        espeak.synth (message) #uzenet felolvasasa 
+
+if __name__ == "__main__": #main function 
+    
+    app = QtGui.QApplication(sys.argv)
+    MainWindow = QtGui.QMainWindow()
+    ui = Ui_MainWindow()
+    ui.setupUi(MainWindow)
+    MainWindow.show()
+    sys.exit(app.exec_())
