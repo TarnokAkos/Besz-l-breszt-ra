@@ -95,7 +95,7 @@ class Ui_MainWindow(object):
             message1 = " The time is " + str(self.alarm_h) + " : " + str(self.alarm_m) + " on " + strftime("%A")
             message = "Sir good morning.. This is your wake up Alarm." + message1
   
-            self.label.setText(_translate("MainWindow",message1, None)) #display the message on GUI screen  
+            self.label.setText(_translate("MainWindow",message1, None)) #Ertesites a GUI-n 
             espeak.synth (message) #Audio jel kuldese a hang eszkozre
             time.sleep(1)
 
@@ -105,7 +105,7 @@ class Ui_MainWindow(object):
         
         self.alarm_h = int(alarm_time[19:21]) #value of hour is sotred in index value 18 and 20
         self.alarm_m = int (alarm_time[23:25]) #value of minute is sotred in index value 23 and 24
-        message = "Alarm is set at " + str(self.alarm_h) + " hours " + str(self.alarm_m) + " minutes"
+        message = "Ebresztes ekkor " + str(self.alarm_h) + " ora " + str(self.alarm_m) + " perc "
         self.label.setText(_translate("MainWindow", message, None)) #Uzenet kiirasa a GUI-ra  
         espeak.synth (message) #uzenet felolvasasa 
 
