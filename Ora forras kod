@@ -89,14 +89,14 @@ class Ui_MainWindow(object):
         self.current_h = int (strftime("%H"))
         self.current_m = int (strftime("%M"))
 
-        if (self.current_h == self.alarm_h) and (self.current_m == self.alarm_m) and ((int(strftime("%S"))%15) == 0): #if the both time match 
+        if (self.current_h == self.alarm_h) and (self.current_m == self.alarm_m) and ((int(strftime("%S"))%15) == 0): #Akkor lep eletbe amikor egyezik a ketto
             print("Ebreszto beallitva!!!!!")
             
             message1 = " The time is " + str(self.alarm_h) + " : " + str(self.alarm_m) + " on " + strftime("%A")
             message = "Sir good morning.. This is your wake up Alarm." + message1
   
             self.label.setText(_translate("MainWindow",message1, None)) #display the message on GUI screen  
-            espeak.synth (message) #speak the message through audio jack 
+            espeak.synth (message) #Audio jel kuldese a hang eszkozre
             time.sleep(1)
 
     def button_pressed(self): #Amikor megvan nyomva a beallitas gomb 
